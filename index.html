@@ -1,26 +1,73 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Basic Meta -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TODO: Set the document title to the name of your application -->
-    <title>Lovable App</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
 
-    <!-- TODO: Update og:title to match your application name -->
-    <meta property="og:title" content="Lovable App" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    <!-- Title -->
+    <title>Kunjbihari Lal & Sons | Teak Wood | Plywood | Timber | Laminates | Mica</title>
+
+    <!-- SEO Meta -->
+    <meta
+      name="description"
+      content="Kunjbihari Lal & Sons - 50+ Years of Excellence in Teak Wood, Plywood, Timber, Laminates & Mica. Trusted wood supplier delivering premium quality materials since 1975."
+    />
+    <meta
+      name="keywords"
+      content="Teak Wood Supplier, Plywood Dealer, Timber Supplier, Laminates, Mica Sheets, Wood Store India"
+    />
+    <meta name="author" content="Kunjbihari Lal & Sons" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- Open Graph (Facebook / WhatsApp Preview) -->
+    <meta property="og:title" content="Kunjbihari Lal & Sons | 50+ Years of Excellence" />
+    <meta
+      property="og:description"
+      content="Premium Teak Wood, Plywood, Timber, Laminates & Mica. Trusted supplier since 1975."
+    />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:url" content="https://yourdomain.com" />
+    <meta property="og:image" content="https://yourdomain.com/preview.jpg" />
 
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:title" content="Kunjbihari Lal & Sons" />
+    <meta
+      name="twitter:description"
+      content="50+ Years of Excellence in Wood & Building Materials."
+    />
+    <meta name="twitter:image" content="https://yourdomain.com/preview.jpg" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#2B1B12" />
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Premium Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   </head>
 
   <body>
     <div id="root"></div>
+
+    <!-- WhatsApp Floating Script (Fallback if React fails) -->
+    <script>
+      function openWhatsApp() {
+        const message = encodeURIComponent(
+          "Hello Kunjbihari Lal & Sons, I would like to know more about your products."
+        );
+        window.open(`https://wa.me/91XXXXXXXXXX?text=${message}`, "_blank");
+      }
+    </script>
+
+    <!-- React Entry -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
