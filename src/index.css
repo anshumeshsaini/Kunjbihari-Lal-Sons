@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Deep Wood Brown #2B1B12 → HSL(20, 43%, 12%) */
+    --background: 30 25% 96%;
+    --foreground: 20 43% 12%;
+
+    --card: 30 30% 97%;
+    --card-foreground: 20 43% 12%;
+
+    --popover: 30 30% 97%;
+    --popover-foreground: 20 43% 12%;
+
+    /* Warm Teak Gold #C19A6B → HSL(30, 43%, 59%) */
+    --primary: 30 43% 59%;
+    --primary-foreground: 30 25% 96%;
+
+    /* Soft Cream #F5E6D3 → HSL(28, 60%, 89%) */
+    --secondary: 28 60% 89%;
+    --secondary-foreground: 20 43% 12%;
+
+    --muted: 28 30% 92%;
+    --muted-foreground: 20 20% 40%;
+
+    --accent: 30 43% 59%;
+    --accent-foreground: 30 25% 96%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 28 25% 85%;
+    --input: 28 25% 85%;
+    --ring: 30 43% 59%;
+
+    --radius: 0.375rem;
+
+    /* Custom brand tokens */
+    --wood-brown: 20 43% 12%;
+    --teak-gold: 30 43% 59%;
+    --soft-cream: 28 60% 89%;
+    --charcoal: 0 0% 10%;
+    --whatsapp-green: 142 70% 40%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 0% 10%;
+    --foreground: 28 60% 89%;
+    --card: 20 30% 14%;
+    --card-foreground: 28 60% 89%;
+    --popover: 20 30% 14%;
+    --popover-foreground: 28 60% 89%;
+    --primary: 30 43% 59%;
+    --primary-foreground: 0 0% 10%;
+    --secondary: 20 25% 20%;
+    --secondary-foreground: 28 60% 89%;
+    --muted: 20 20% 18%;
+    --muted-foreground: 28 30% 65%;
+    --accent: 30 43% 59%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 20 20% 22%;
+    --input: 20 20% 22%;
+    --ring: 30 43% 59%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-20 md:py-[120px] px-6 md:px-12 lg:px-20;
+  }
+
+  .gold-line {
+    @apply h-[2px] bg-primary;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer utilities {
+  .whatsapp-pulse {
+    animation: whatsapp-pulse 3s ease-in-out infinite;
+  }
+
+  @keyframes whatsapp-pulse {
+    0%, 100% {
+      box-shadow: 0 0 0 0 hsl(142 70% 40% / 0.4);
+    }
+    50% {
+      box-shadow: 0 0 0 12px hsl(142 70% 40% / 0);
+    }
+  }
+
+  @keyframes scrollDown {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(300%); }
+  }
+}
